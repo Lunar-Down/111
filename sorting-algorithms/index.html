@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="交互式排序算法可视化工具，支持冒泡排序、快速排序和选择排序的实时演示">
+    <meta name="keywords" content="排序算法, 可视化, 冒泡排序, 快速排序, 选择排序, 算法演示">
+    <meta name="author" content="技术笔记">
+    <meta property="og:title" content="排序算法可视化 | 技术笔记">
+    <meta property="og:description" content="交互式排序算法可视化工具，支持冒泡排序、快速排序和选择排序的实时演示">
+    <meta property="og:type" content="website">
     <title>排序算法可视化 | 技术笔记</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="header">
         <div class="container">
             <h1 class="logo">排序算法可视化</h1>
-            <nav class="nav">
+            <nav class="nav" aria-label="主导航">
                 <a href="../" class="nav-link">← 返回博客</a>
             </nav>
         </div>
@@ -24,20 +31,42 @@
             </div>
         </section>
 
-        <section class="controls">
+        <section class="controls" aria-label="控制面板">
             <div class="container">
-                <button id="generateBtn" class="btn">生成随机数组</button>
-                <button id="bubbleSortBtn" class="btn btn-secondary">冒泡排序</button>
-                <button id="quickSortBtn" class="btn btn-secondary">快速排序</button>
-                <button id="selectionSortBtn" class="btn btn-secondary">选择排序</button>
-                <button id="resetBtn" class="btn btn-outline">重置</button>
+                <div class="control-group">
+                    <label for="arraySize">数组大小: <span id="arraySizeValue">30</span></label>
+                    <input type="range" id="arraySize" min="10" max="100" value="30" aria-label="数组大小">
+                </div>
+                <div class="control-group">
+                    <label for="speed">动画速度: <span id="speedValue">50</span>ms</label>
+                    <input type="range" id="speed" min="10" max="200" value="50" aria-label="动画速度">
+                </div>
+                <div class="button-group">
+                    <button id="generateBtn" class="btn btn-primary" aria-label="生成随机数组">生成随机数组</button>
+                    <button id="copyArrayBtn" class="btn btn-outline" aria-label="复制数组到剪贴板">复制数组</button>
+                </div>
+                <div class="button-group">
+                    <button id="bubbleSortBtn" class="btn btn-secondary" aria-label="运行冒泡排序">冒泡排序</button>
+                    <button id="quickSortBtn" class="btn btn-secondary" aria-label="运行快速排序">快速排序</button>
+                    <button id="selectionSortBtn" class="btn btn-secondary" aria-label="运行选择排序">选择排序</button>
+                </div>
+                <div class="button-group">
+                    <button id="stopBtn" class="btn btn-danger" disabled aria-label="停止排序">停止排序</button>
+                    <button id="resetBtn" class="btn btn-outline" aria-label="重置数组">重置</button>
+                </div>
             </div>
         </section>
 
         <section class="visualization">
             <div class="container">
-                <div id="array-container" class="array-container"></div>
-                <div id="status" class="status">点击"生成随机数组"开始</div>
+                <div id="array-container" class="array-container" role="img" aria-label="排序可视化图表"></div>
+                <div id="status" class="status" role="status" aria-live="polite">点击"生成随机数组"开始</div>
+                <div id="progress" class="progress-container" style="display: none;">
+                    <div class="progress-bar">
+                        <div id="progressFill" class="progress-fill"></div>
+                    </div>
+                    <span id="progressText" class="progress-text">0%</span>
+                </div>
             </div>
         </section>
 
@@ -45,24 +74,24 @@
             <div class="container">
                 <h2 class="section-title">算法说明</h2>
                 <div class="info-grid">
-                    <div class="info-card">
+                    <article class="info-card">
                         <h3>冒泡排序</h3>
                         <p><strong>时间复杂度：</strong>O(n²)</p>
                         <p><strong>空间复杂度：</strong>O(1)</p>
                         <p>重复遍历数组，比较相邻元素并交换，直到排序完成。</p>
-                    </div>
-                    <div class="info-card">
+                    </article>
+                    <article class="info-card">
                         <h3>快速排序</h3>
                         <p><strong>时间复杂度：</strong>O(n log n)</p>
                         <p><strong>空间复杂度：</strong>O(log n)</p>
                         <p>选择基准元素，将数组分为小于和大于基准的两部分，递归排序。</p>
-                    </div>
-                    <div class="info-card">
+                    </article>
+                    <article class="info-card">
                         <h3>选择排序</h3>
                         <p><strong>时间复杂度：</strong>O(n²)</p>
                         <p><strong>空间复杂度：</strong>O(1)</p>
                         <p>每次从未排序部分选择最小元素，放到已排序部分的末尾。</p>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
