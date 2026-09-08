@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排序算法可视化 | 技术笔记</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">排序算法可视化</h1>
+            <nav class="nav">
+                <a href="../" class="nav-link">← 返回博客</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <h2>经典排序算法演示</h2>
+                <p>可视化理解冒泡排序、快速排序和选择排序</p>
+            </div>
+        </section>
+
+        <section class="controls">
+            <div class="container">
+                <button id="generateBtn" class="btn">生成随机数组</button>
+                <button id="bubbleSortBtn" class="btn btn-secondary">冒泡排序</button>
+                <button id="quickSortBtn" class="btn btn-secondary">快速排序</button>
+                <button id="selectionSortBtn" class="btn btn-secondary">选择排序</button>
+                <button id="resetBtn" class="btn btn-outline">重置</button>
+            </div>
+        </section>
+
+        <section class="visualization">
+            <div class="container">
+                <div id="array-container" class="array-container"></div>
+                <div id="status" class="status">点击"生成随机数组"开始</div>
+            </div>
+        </section>
+
+        <section class="algorithms-info">
+            <div class="container">
+                <h2 class="section-title">算法说明</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>冒泡排序</h3>
+                        <p><strong>时间复杂度：</strong>O(n²)</p>
+                        <p><strong>空间复杂度：</strong>O(1)</p>
+                        <p>重复遍历数组，比较相邻元素并交换，直到排序完成。</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>快速排序</h3>
+                        <p><strong>时间复杂度：</strong>O(n log n)</p>
+                        <p><strong>空间复杂度：</strong>O(log n)</p>
+                        <p>选择基准元素，将数组分为小于和大于基准的两部分，递归排序。</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>选择排序</h3>
+                        <p><strong>时间复杂度：</strong>O(n²)</p>
+                        <p><strong>空间复杂度：</strong>O(1)</p>
+                        <p>每次从未排序部分选择最小元素，放到已排序部分的末尾。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 技术笔记. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="algorithms.js"></script>
+</body>
+</html>
