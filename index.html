@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术笔记 | 个人博客</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">技术笔记</h1>
+            <nav class="nav">
+                <a href="#home" class="nav-link active">首页</a>
+                <a href="#articles" class="nav-link">文章</a>
+                <a href="#about" class="nav-link">关于</a>
+            </nav>
+            <button class="menu-btn" aria-label="菜单">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>探索技术的世界</h2>
+                    <p>分享编程学习笔记、技术见解与开发经验</p>
+                    <a href="#articles" class="btn">开始阅读</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Articles Section -->
+        <section id="articles" class="articles">
+            <div class="container">
+                <h2 class="section-title">最新文章</h2>
+                <div class="articles-grid">
+                    <article class="article-card">
+                        <div class="article-tag">JavaScript</div>
+                        <h3>理解 JavaScript 异步编程</h3>
+                        <p>深入理解 Promise、async/await 和事件循环的工作原理...</p>
+                        <div class="article-meta">
+                            <span class="date">2024-01-15</span>
+                            <a href="#" class="read-more">阅读全文 →</a>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-tag">CSS</div>
+                        <h3>CSS Grid 布局完全指南</h3>
+                        <p>掌握现代 CSS 布局技术，创建灵活且响应式的页面设计...</p>
+                        <div class="article-meta">
+                            <span class="date">2024-01-10</span>
+                            <a href="#" class="read-more">阅读全文 →</a>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-tag">HTML</div>
+                        <h3>HTML5 语义化标签最佳实践</h3>
+                        <p>使用语义化标签构建更易访问和 SEO 友好的网页...</p>
+                        <div class="article-meta">
+                            <span class="date">2024-01-05</span>
+                            <a href="#" class="read-more">阅读全文 →</a>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-tag">Node.js</div>
+                        <h3>Node.js 后端项目搭建指南</h3>
+                        <p>从零开始搭建一个完整的 Node.js 后端项目...</p>
+                        <div class="article-meta">
+                            <span class="date">2023-12-28</span>
+                            <a href="#" class="read-more">阅读全文 →</a>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-tag">Git</div>
+                        <h3>Git 工作流与分支策略</h3>
+                        <p>团队协作中的 Git 最佳实践和分支管理策略...</p>
+                        <div class="article-meta">
+                            <span class="date">2023-12-20</span>
+                            <a href="#" class="read-more">阅读全文 →</a>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-tag">性能优化</div>
+                        <h3>Web 性能优化实战技巧</h3>
+                        <p>提升网站加载速度和运行性能的实用方法...</p>
+                        <div class="article-meta">
+                            <span class="date">2023-12-15</span>
+                            <a href="#" class="read-more">阅读全文 →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">关于我</h2>
+                <div class="about-content">
+                    <div class="about-avatar">
+                        <div class="avatar-placeholder">👨‍💻</div>
+                    </div>
+                    <div class="about-text">
+                        <p>你好！我是一名热爱技术的开发者，喜欢探索新的编程技术和工具。</p>
+                        <p>这个博客用来记录我的学习笔记和技术心得，希望能帮助到同样在学习路上的你。</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link">GitHub</a>
+                            <a href="#" class="social-link">Twitter</a>
+                            <a href="#" class="social-link">Email</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 技术笔记. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
